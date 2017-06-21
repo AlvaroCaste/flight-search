@@ -6,3 +6,8 @@ scalaVersion := "2.11.11"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
+libraryDependencies ++= Seq(
+  "com.nrinaudo" %% "kantan.csv" % "0.1.19",
+  "com.nrinaudo" %% "kantan.csv-generic" % "0.1.19",
+  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+)
