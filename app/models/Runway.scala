@@ -1,0 +1,22 @@
+package models
+
+case class Runway(id: String,
+                  airportRef: String,
+                  airportIdent: String,
+                  lengthFt: Option[Int],
+                  widthFt: Option[Int],
+                  surface: String,
+                  lighted: Int,
+                  closed: Int,
+                  leIdent: String,
+                  leLatitudeDeg: Option[Double],
+                  leLongitudeDeg: Option[Double],
+                  leElevationFt: Option[Int],
+                  leHeadingDegT: Option[Double],
+                  leDisplacedThresholdFt: Option[Double],
+                  heIdent: String,
+                  heLatitudeDeg: Option[Double],
+                  heLongitudeDeg: Option[Double],
+                  heElevationFt: Option[Int],
+                  heHeadingDegT: Option[Double],
+                  heDisplacedThresholdFt: Option[Int])
