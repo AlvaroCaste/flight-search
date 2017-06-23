@@ -1,14 +1,15 @@
 package daos
+import javax.inject.Inject
+
 import models.Airport
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
-
 import kantan.csv._
 import kantan.csv.ops._
 import kantan.csv.generic._
 
-class AirportDAOImpl extends AirportDAO {
+class AirportDAOImpl @Inject() extends AirportDAO {
   override def findAirportsByISOCountry(isoCountry: String): Future[List[Airport]] = Future {
     val airports = getClass.getResource("/resources/airports.csv").asCsvReader[Airport](rfc.withHeader).
       toList.map(_.get)
