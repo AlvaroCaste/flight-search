@@ -1,3 +1,5 @@
 # Routes
 
 GET     /                           controllers.HomeController.index
+
+GET     /airport/:country           controllers.AirportController.get(country)

@@ -1,0 +1,14 @@
+@(country: Country, airportsWithRunways: Map[Airport, List[Runway]])
+
+@country.name
+
+@for(airportWithRunways <- airportsWithRunways) {
+    <p>@airportWithRunways._1.name</p>
+    @for(runway <- airportWithRunways._2) {
+        <li>
+        @for(runwayAttr <- runway.productIterator.toList) {
+            @runwayAttr
+        }
+        </li>
+    }
+}
