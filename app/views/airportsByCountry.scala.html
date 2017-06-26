@@ -1,0 +1,12 @@
+@(countriesWithTheirAirports: List[(Country, List[Airport])])
+
+@for(countryWithTheirAirports <- countriesWithTheirAirports) {
+<p>@countryWithTheirAirports._1.name @countryWithTheirAirports._2.length</p>
+@for(airport <- countryWithTheirAirports._2) {
+<li>
+@for(airportAttr <- airport.productIterator.toList) {
+    @airportAttr
+}
+</li>
+}
+}

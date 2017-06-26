@@ -3,3 +3,5 @@
 GET     /                           controllers.HomeController.index
 
 GET     /airport/:country           controllers.AirportController.get(country)
+
+GET     /highestNumberAirports      controllers.AirportController.getHighestNumberAirports
